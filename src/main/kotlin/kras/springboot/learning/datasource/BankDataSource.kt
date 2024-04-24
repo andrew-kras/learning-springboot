@@ -5,4 +5,5 @@ import kras.springboot.learning.model.Bank
 interface BankDataSource {
 
     fun retrieveBanks(): Collection<Bank>
+    fun retrieveBanks(accountNumber: String): Bank
 }

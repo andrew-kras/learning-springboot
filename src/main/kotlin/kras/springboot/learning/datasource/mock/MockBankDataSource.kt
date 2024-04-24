@@ -8,9 +8,10 @@ import org.springframework.stereotype.Repository
 class MockBankDataSource : BankDataSource {
     val banks = listOf(
         Bank("1234", 17, 0.1),
-        Bank("1000", 1, 0.9),
-        Bank("7", 44, 0.5),
+        Bank("1", 1, 1.0),
+        Bank("2", 2, 0.2),
     )
 
     override fun retrieveBanks(): Collection<Bank> = banks
+    override fun retrieveBanks(accountNumber: String): Bank = banks.first { it.accountNumber == accountNumber }
 }
