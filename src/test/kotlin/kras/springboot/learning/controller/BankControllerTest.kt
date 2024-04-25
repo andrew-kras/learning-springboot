@@ -178,7 +178,7 @@ internal class BankControllerTest @Autowired constructor(
         @Test
         fun `should delete the bank with the given account number ` () {
             // given
-            val accountNumber = "1234"
+            val accountNumber = "2"
 
             // when
             mockMvc.delete(("$baseUrl/$accountNumber"))
